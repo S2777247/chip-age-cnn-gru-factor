@@ -36,7 +36,7 @@ def get_csi1000_stocks(index_code, start_date, end_date, max_stocks=300):
     )
 
     if comp.empty:
-        raise ValueError("没有获取到中证1000成分股。可能是 index_weight 接口权限不够，或者日期范围不对。")
+        raise ValueError
 
     comp = comp.sort_values("trade_date")
 
